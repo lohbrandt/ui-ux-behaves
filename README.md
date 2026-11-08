@@ -36,13 +36,13 @@ the original texts.
 In Claude Code:
 
 ```
-/plugin install ui-ux-behaves --marketplace sin-ev/ui-ux-behaves
+/plugin install ui-ux-behaves --marketplace lohbrandt/ui-ux-behaves
 ```
 
 On older versions, add the marketplace first:
 
 ```
-/plugin marketplace add sin-ev/ui-ux-behaves
+/plugin marketplace add lohbrandt/ui-ux-behaves
 /plugin install ui-ux-behaves@ui-ux-behaves
 ```
 

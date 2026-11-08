@@ -1,6 +1,6 @@
 {
   "name": "ui-ux-behaves",
-  "owner": { "name": "Steffen Lohbrandt" },
+  "owner": { "name": "Steffen Lohbrandt", "url": "https://github.com/lohbrandt" },
   "metadata": { "description": "UI/UX Behaves: design-system-agnostic UI/UX rules for Claude." },
   "plugins": [
     {
