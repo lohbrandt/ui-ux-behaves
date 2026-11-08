@@ -34,6 +34,8 @@ def main() -> int:
     ap.add_argument("mapping")
     ap.add_argument("--catalog", default=str(here))
     args = ap.parse_args()
+    if not Path(args.catalog).is_file():
+        ap.error(f"catalog not found: {args.catalog} (pass --catalog path/to/behave-catalog.md)")
 
     catalog = [k for k, _ in rows(Path(args.catalog))]
     mapping = rows(Path(args.mapping))

@@ -19,19 +19,22 @@ The config names the patterns of your design system (see examples/audit-config.*
 `pattern` is a Python regex counted per file. `with` (optional) counts a file only if it also
 matches that regex. `skip` lists globs where the pattern is the component itself.
 
-Without --baseline it prints the counts and exits 0. With --baseline it fails (exit 1) when a
-count rose or a new file appears, and reports counts that fell so the baseline can be lowered.
---update writes the current counts as the new baseline.
+Without --baseline it prints the counts and exits 0. With --baseline it fails (exit 1) when any
+count differs from the baseline: a rise is a regression, a fall means the baseline must be lowered
+so the count cannot creep back. --update writes the current counts as the new baseline (and is
+required to create one; a missing baseline is an error, exit 2).
 Standard library only.
 """
 
 import argparse
+import functools
 import json
 import re
 import sys
 from pathlib import Path
 
 
+@functools.lru_cache(maxsize=None)
 def glob_re(pattern: str) -> re.Pattern:
     out, i = "", 0
     while i < len(pattern):
@@ -52,14 +55,27 @@ def matches(path: str, globs: list[str]) -> bool:
     return any(glob_re(g).match(path) for g in globs)
 
 
+def include_roots(root: Path, include: list[str]) -> set[Path]:
+    """Walk only the fixed folder in front of each include glob, never all of root (node_modules)."""
+    roots = set()
+    for g in include:
+        fixed = []
+        for part in g.split("/")[:-1]:
+            if any(c in part for c in "*?["):
+                break
+            fixed.append(part)
+        roots.add(root.joinpath(*fixed))
+    return roots
+
+
 def scan(root: Path, config: dict) -> dict[str, dict[str, int]]:
     include, exclude = config.get("include", ["**/*"]), config.get("exclude", [])
-    files = sorted(
+    rels = {
         p.relative_to(root).as_posix()
-        for p in root.rglob("*")
-        if p.is_file() and matches(p.relative_to(root).as_posix(), include)
-        and not matches(p.relative_to(root).as_posix(), exclude)
-    )
+        for base in include_roots(root, include) if base.is_dir()
+        for p in base.rglob("*") if p.is_file()
+    }
+    files = sorted(f for f in rels if matches(f, include) and not matches(f, exclude))
     texts = {f: (root / f).read_text(encoding="utf-8", errors="replace") for f in files}
     counts: dict[str, dict[str, int]] = {}
     for name, check in config["checks"].items():
@@ -120,16 +136,19 @@ def main() -> int:
     if not args.baseline:
         return 0
     path = Path(args.baseline)
-    if args.update or not path.exists():
+    if args.update:
         path.write_text(json.dumps(counts, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         print(f"baseline written: {path}")
         return 0
+    if not path.exists():
+        print(f"baseline missing: {path} (create it on purpose with --update)", file=sys.stderr)
+        return 2
     worse, better = ratchet(counts, json.loads(path.read_text(encoding="utf-8")))
     for line in better:
-        print(f"better (lower the baseline with --update): {line}")
+        print(f"BETTER, lower the baseline with --update: {line}", file=sys.stderr)
     for line in worse:
         print(f"WORSE: {line}", file=sys.stderr)
-    return 1 if worse else 0
+    return 1 if worse or better else 0
 
 
 if __name__ == "__main__":
