@@ -49,6 +49,11 @@
       "behave": "ui-ux-form: visible label",
       "pattern": "\\bhideLabel(?=\\s*/?>|\\s+[A-Za-z_][\\w-]*(?:[=\\s/>]))|\\bhideLabel=\\{true\\}",
       "fix": "Show the label; a placeholder is not a label. Counts only hideLabel set to true, not passed-through props"
+    },
+    "rawQueryError": {
+      "behave": "page.error / page.noAccess",
+      "pattern": "if \\(\\s*\\w+\\.isError\\s*\\)\\s*\\{?\\s*return\\s*\\(?\\s*<InlineNotification|\\w+\\.(?:isError|error) \\|\\| !\\w+\\.data|!\\w+\\.data \\|\\| \\w+\\.(?:isError|error)",
+      "fix": "TanStack Query: keep three cases apart. Load error with \"Try again\", 403 as no access, 404 as not found, each with a way back; never lump an error together with missing data, and keep stale data on screen when only a background refetch fails"
     }
   }
 }

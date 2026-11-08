@@ -36,8 +36,17 @@ error already shown. Parse tolerantly: spaces, groups, upper/lower case.
 | `form.dirty` / `form.dirtyGuard` | Unsaved changes visible; ask on leaving ("Discard changes" / "Keep editing") |
 | `form.autosave` | Where interruptions are frequent (data entry on the phone): draft saved automatically, state visible ("Saved 10:42") |
 
-**The submit button stays enabled.** A disabled button does not explain what is missing. Exception:
-a block with a visible hint and a way out (`action.blocked`).
+**Default: the submit button stays enabled.** A disabled button does not explain what is missing,
+cannot be focused by keyboard users and is often missed by screen readers. Pressing it shows the
+field errors and the summary instead (`form.errorSummary`). Exceptions where disabling is fine:
+
+- While sending (`form.submitting`), to prevent a double submit; the button shows progress.
+- A short form (one to three fields, all visible) where the missing input is obvious and a hint next
+  to the button says what is needed, for example a search with one field.
+- A block that the user cannot resolve in the form (no right, a closed period): then a visible hint
+  with the reason and a way out (`action.blocked`).
+
+Whatever the case, the reason is visible on screen, not only in a tooltip.
 
 **Toggles** take effect immediately, without a save button. The label says what happens and where
 ("Show in lists"), not only the object. If the toggle acts outside the page, the help text below

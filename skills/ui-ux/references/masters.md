@@ -88,9 +88,32 @@ unless the user wants it (panel closed, full screen). See also: no layout shift 
 - **Read aloud.** If the block sounds bumpy when read aloud, rewrite it. Screen readers read exactly
   like that.
 
+## 5. Sound
+
+People ask for a sound when feedback is missing (the basement switch). The fix is visible feedback
+at the place of the action, not a sound.
+
+- **No sound on ordinary controls.** Toggles, buttons and saves stay silent; the visible change is
+  the feedback (Norman: feedback, mapping).
+- **Sound only as a supplement, never as the only signal.** Whoever cannot hear it, has it switched
+  off or works in a shared room must get the same information on screen (WCAG 1.3.3, 1.4.2).
+- **Off by default, switchable per user.** If at all, for rare events that happen while the user
+  looks elsewhere: a reminder that is due, a message that arrived.
+- **Mind the room.** In counselling and other confidential settings a sound tells everyone at the
+  desk that something happened. Silence is the safe default.
+- **Screen readers already speak.** Live regions (`role="status"`) are the audible feedback for
+  those who need it; do not add a second sound on top.
+
+Check question: does the screen say the same as the sound would? Case: a user wishing a toggle
+"made a sound" because its effect was on another page.
+
+Read: [WCAG 1.4.2 Audio Control](https://www.w3.org/WAI/WCAG22/Understanding/audio-control),
+[WCAG 1.3.3 Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics),
+[Audio Signifiers for Voice Interaction (NN/g)](https://www.nngroup.com/articles/audio-signifiers-voice-interaction/).
+
 ## During a review
 
 1. Look at the page once like a newcomer: what invites a click, and what is different afterwards?
-2. Go through the four groups above and name findings with the term
+2. Go through the five groups above and name findings with the term
    ("Mapping: toggle acts on another page").
 3. Severity and fix as in the entry skill under "Depth of method".

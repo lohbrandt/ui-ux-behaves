@@ -5,6 +5,13 @@ forms, date inputs, actions, system feedback, tabs and dialogs. It works with an
 
 Built while making software for debt counselling, where clear screens help people get out of debt.
 
+## Who it is for
+
+Teams that build **business applications**: back-office tools, case management, admin areas,
+data entry with many tables, forms and dialogs, used for hours a day by the same people. It is
+less suited to marketing sites, games or consumer apps, where brand and emotion lead. It does
+not replace a design system; it tells your design system which state to show when.
+
 ## The idea
 
 Every state a screen can be in gets a **behave key** of the form `context.state[.severity]`, for
@@ -12,11 +19,12 @@ example `table.noResults`, `field.invalid` or `action.undo`. Each key sits on th
 semantics, trigger) and comes with a rule, a typical trap, accessibility requirements and what
 happens on narrow screens. The suite never names components. Your design-system skill maps each
 key to a component once (`references/design-system-mapping.md`), so switching design systems means
-replacing one mapping file, not the rules.
+replacing one mapping file, not the rules. For IBM Carbon with React a filled-in mapping ships in
+`examples/design-system-mapping.carbon-react.md`.
 
 The rules are grounded in the classics: Don Norman (signifiers, mapping, feedback), Jakob Nielsen's
 ten heuristics, Gestalt principles and UX writing. Each principle has a check question and links to
-the original texts.
+the original texts. A fifth group covers sound: when it helps, and why silence is the default.
 
 ## Skills
 
@@ -50,12 +58,6 @@ IBM Carbon with React.
 In Claude Code:
 
 ```
-/plugin install ui-ux-behaves --marketplace lohbrandt/ui-ux-behaves
-```
-
-On older versions, add the marketplace first:
-
-```
 /plugin marketplace add lohbrandt/ui-ux-behaves
 /plugin install ui-ux-behaves@ui-ux-behaves
 ```
@@ -66,7 +68,8 @@ Install the plugin and ask Claude to plan, build or review a screen, for example
 settings page against the UI/UX rules" or "Write acceptance criteria for the creditor list".
 Claude loads the entry skill and the matching sub-skill on its own. To connect your design
 system, copy `skills/ui-ux/references/design-system-mapping.md` into your design-system skill and
-fill in the component for each key.
+fill in the component for each key, or start from the Carbon example in `examples/`. Check it with
+`python3 skills/ui-ux/scripts/mapping_check.py <your-mapping.md>`.
 
 ## Data
 
