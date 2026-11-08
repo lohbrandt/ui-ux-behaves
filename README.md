@@ -3,6 +3,8 @@
 A rule suite that helps Claude plan, build and review the screens of business applications: tables,
 forms, date inputs, actions, system feedback, tabs and dialogs. It works with any design system.
 
+Built while making software for debt counselling, where clear screens help people get out of debt.
+
 ## The idea
 
 Every state a screen can be in gets a **behave key** of the form `context.state[.severity]`, for
