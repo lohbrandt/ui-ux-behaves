@@ -111,9 +111,33 @@ Read: [WCAG 1.4.2 Audio Control](https://www.w3.org/WAI/WCAG22/Understanding/aud
 [WCAG 1.3.3 Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics),
 [Audio Signifiers for Voice Interaction (NN/g)](https://www.nngroup.com/articles/audio-signifiers-voice-interaction/).
 
+## 6. Respect (no deceptive patterns)
+
+Everything above comes from research about how people perceive, read and decide. The same
+knowledge can be turned against them: to make them click, stay, pay or share more than they want.
+This suite uses it only for the people on the screen.
+
+| Never | Instead |
+|---|---|
+| **False urgency** ("Only 2 left", countdowns that restart) | State real deadlines with their source |
+| **Confirmshaming** ("No, I don't care about my safety") | A neutral "No" next to the "Yes" |
+| **Hidden costs or steps** that appear only at the end | All costs and steps visible from the start |
+| **Harder out than in** (sign up in one click, cancel by phone) | Leaving takes as few steps as joining |
+| **Pre-ticked consent** and sharing switched on by default | Off by default; the person switches it on |
+| **Nagging** (the same request after every "No") | Ask once; respect the answer for a stated time |
+| **Disguised ads or actions** (an ad that looks like a result, "Continue" that subscribes) | Label what it is; the button says what happens |
+
+Check question: would the person agree if they saw exactly how the screen works on them?
+Case: a cancel button that is grey and small while "Keep my plan" is large and coloured.
+
+Read: Harry Brignull, [Deceptive Patterns](https://www.deceptive.design/),
+[Deceptive Patterns in UX (NN/g)](https://www.nngroup.com/articles/deceptive-patterns/),
+EU Digital Services Act, [Article 25](https://eur-lex.europa.eu/eli/reg/2022/2065/oj) (ban on
+deceptive interface design for online platforms).
+
 ## During a review
 
 1. Look at the page once like a newcomer: what invites a click, and what is different afterwards?
-2. Go through the five groups above and name findings with the term
+2. Go through the six groups above and name findings with the term
    ("Mapping: toggle acts on another page").
 3. Severity and fix as in the entry skill under "Depth of method".

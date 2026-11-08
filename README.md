@@ -1,16 +1,18 @@
 # UI/UX Behaves
 
-A rule suite that helps Claude plan, build and review the screens of business applications: tables,
-forms, date inputs, actions, system feedback, tabs and dialogs. It works with any design system.
+A rule suite that helps Claude plan, build and review screens: tables, forms, date inputs, actions,
+system feedback, tabs and dialogs. It works with any design system.
 
 Built while making software for debt counselling, where clear screens help people get out of debt.
 
-## Who it is for
+## Purpose
 
-Teams that build **business applications**: back-office tools, case management, admin areas,
-data entry with many tables, forms and dialogs, used for hours a day by the same people. It is
-less suited to marketing sites, games or consumer apps, where brand and emotion lead. It does
-not replace a design system; it tells your design system which state to show when.
+For software that people depend on: counselling, social work, public services, health, education,
+and the everyday tools of those who serve them. The rules rest on decades of research into how
+people perceive, read and decide. This plugin uses that research for the people on the screen, never
+against them: no tricks that exploit attention, fear or habit. Free, MIT, no tracking.
+
+It does not replace a design system; it tells your design system which state to show when.
 
 ## The idea
 
@@ -24,7 +26,8 @@ replacing one mapping file, not the rules. For IBM Carbon with React a filled-in
 
 The rules are grounded in the classics: Don Norman (signifiers, mapping, feedback), Jakob Nielsen's
 ten heuristics, Gestalt principles and UX writing. Each principle has a check question and links to
-the original texts. A fifth group covers sound: when it helps, and why silence is the default.
+the original texts. Two further groups cover sound (when it helps, and why silence is the default)
+and respect: no deceptive patterns.
 
 ## Skills
 
@@ -39,7 +42,7 @@ the original texts. A fifth group covers sound: when it helps, and why silence i
 | `ui-ux-tabs` | Tabs: when to use them, URL state, dirty and invalid tabs, overflow |
 | `ui-ux-dialog` | Modals and side panels: when a dialog is right, focus, nesting, closing |
 
-## Commands and tools
+## Commands
 
 | Command | What it does |
 |---|---|
@@ -47,35 +50,38 @@ the original texts. A fifth group covers sound: when it helps, and why silence i
 | `/ui-ux-behaves:audit` | Counts source patterns that break behaves (spinner over an area, toggle inside a submitted form, disabled submit, "Are you sure?") and keeps them from growing with a baseline |
 | `/ui-ux-behaves:copy-check` | Finds stuttering copy: the same word repeated in elements close together on screen, and rewrites the block |
 
-The scripts behind them live in `skills/ui-ux/scripts/` (Python 3, standard library only) and also
-run in CI: `behave_audit.py` (ratchet, exit 1 when a count rises), `stutter_check.py` and
-`mapping_check.py` (every behave key mapped exactly once in your design-system mapping). The audit
-patterns come from a config; `examples/audit-config.carbon-react.json` is a starting point for
-IBM Carbon with React.
+The audit patterns come from a plain JSON config; `examples/audit-config.carbon-react.json` is a
+starting point for IBM Carbon with React. The same config can drive a check in your CI.
 
 ## Install
 
-In Claude Code:
+In Claude Code, one command at a time.
+
+Step 1, add the marketplace:
 
 ```
 /plugin marketplace add lohbrandt/ui-ux-behaves
+```
+
+Step 2, once step 1 reports success, install the plugin:
+
+```
 /plugin install ui-ux-behaves@ui-ux-behaves
 ```
 
 ## Use it
 
-Install the plugin and ask Claude to plan, build or review a screen, for example "Review the
-settings page against the UI/UX rules" or "Write acceptance criteria for the creditor list".
-Claude loads the entry skill and the matching sub-skill on its own. To connect your design
-system, copy `skills/ui-ux/references/design-system-mapping.md` into your design-system skill and
-fill in the component for each key, or start from the Carbon example in `examples/`. Check it with
-`python3 skills/ui-ux/scripts/mapping_check.py <your-mapping.md>`.
+Ask Claude to plan, build or review a screen, for example "Review the settings page against the
+UI/UX rules" or "Write acceptance criteria for the creditor list". Claude loads the entry skill and
+the matching sub-skill on its own. To connect your design system, copy
+`skills/ui-ux/references/design-system-mapping.md` into your design-system skill and fill in the
+component for each key, or start from the Carbon example in `examples/`. Then ask Claude to check
+the mapping against the catalog.
 
 ## Data
 
-The plugin contains Markdown instructions and three local Python scripts. The scripts read the
-files you point them at and write only the report and baseline files you name. Nothing is sent
-anywhere and no external service is called.
+The plugin contains only Markdown and JSON: instructions, references and examples. It runs no code
+of its own, sends nothing anywhere and calls no external service.
 
 ## License
 
