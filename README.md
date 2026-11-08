@@ -31,6 +31,20 @@ the original texts.
 | `ui-ux-tabs` | Tabs: when to use them, URL state, dirty and invalid tabs, overflow |
 | `ui-ux-dialog` | Modals and side panels: when a dialog is right, focus, nesting, closing |
 
+## Commands and tools
+
+| Command | What it does |
+|---|---|
+| `/ui-ux-behaves:review` | Reviews a page, component, URL or screenshot against the behaves and the masters; findings with severity, term and fix, then acceptance criteria |
+| `/ui-ux-behaves:audit` | Counts source patterns that break behaves (spinner over an area, toggle inside a submitted form, disabled submit, "Are you sure?") and keeps them from growing with a baseline |
+| `/ui-ux-behaves:copy-check` | Finds stuttering copy: the same word repeated in elements close together on screen, and rewrites the block |
+
+The scripts behind them live in `skills/ui-ux/scripts/` (Python 3, standard library only) and also
+run in CI: `behave_audit.py` (ratchet, exit 1 when a count rises), `stutter_check.py` and
+`mapping_check.py` (every behave key mapped exactly once in your design-system mapping). The audit
+patterns come from a config; `examples/audit-config.carbon-react.json` is a starting point for
+IBM Carbon with React.
+
 ## Install
 
 In Claude Code:
@@ -56,8 +70,9 @@ fill in the component for each key.
 
 ## Data
 
-The plugin contains only Markdown instructions. It sends no data anywhere, calls no external
-service and stores nothing.
+The plugin contains Markdown instructions and three local Python scripts. The scripts read the
+files you point them at and write only the report and baseline files you name. Nothing is sent
+anywhere and no external service is called.
 
 ## License
 

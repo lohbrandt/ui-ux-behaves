@@ -37,6 +37,21 @@ design-system mapping.
 **Required for every container** (page, table, form, dialog): `loading`, `empty`, `ready`, `error`,
 plus `warning` wherever there is risk. Further behaves only where harm or frequency justify them.
 
+## Tools
+
+Python 3, standard library only; each prints its usage with `--help`.
+
+- `python3 ${CLAUDE_SKILL_DIR}/scripts/behave_audit.py --config audit.json [--baseline b.json]`:
+  counts source patterns that break behaves (spinner over an area, toggle in a submitted form,
+  disabled submit, "Are you sure?") and works as a ratchet. Patterns come from a config per design
+  system; example for Carbon React in the plugin's `examples/`.
+- `python3 ${CLAUDE_SKILL_DIR}/scripts/stutter_check.py screen.txt --lang de`: finds the same word
+  repeated in elements close together, from rendered text or an aria snapshot.
+- `python3 ${CLAUDE_SKILL_DIR}/scripts/mapping_check.py path/to/design-system-mapping.md`: every
+  catalog key mapped exactly once, none left empty.
+
+The audit only finds patterns. A clean run does not prove that states exist; that is the review.
+
 ## Who uses the app
 
 Before designing, write down the roles, the setting (office, field, phone) and how often people are

@@ -1,0 +1,48 @@
+{
+  "include": ["src/**/*.tsx", "src/**/*.jsx", "src/locales/**/*.json"],
+  "exclude": ["**/*.test.tsx", "**/*.test.jsx", "**/*.stories.tsx", "**/__mocks__/**"],
+  "checks": {
+    "spinner": {
+      "behave": "page.loading / table.loading",
+      "pattern": "<Loading\\b",
+      "fix": "Skeleton shaped like the area (SkeletonText, DataTableSkeleton); InlineLoading only at a button or field"
+    },
+    "rawDataTable": {
+      "behave": "table.*",
+      "pattern": "<DataTable\\b",
+      "fix": "Use your table component that already handles empty, noResults, loadError and totals; list its folder in skip",
+      "skip": ["src/components/table/**"]
+    },
+    "toggleNextToSubmit": {
+      "behave": "ui-ux-form: toggles",
+      "pattern": "<Toggle\\b",
+      "with": "type=\"submit\"",
+      "fix": "A toggle takes effect immediately; inside a form that is submitted, use a checkbox"
+    },
+    "disabledSubmit": {
+      "behave": "action.blocked / form.errorSummary",
+      "pattern": "<Button\\b[^>]*\\btype=\"submit\"[^>]*\\bdisabled\\b",
+      "fix": "Keep submit enabled and show field errors plus a summary; block only with a visible hint and a way out"
+    },
+    "okButton": {
+      "behave": "action.primary",
+      "pattern": ">\\s*OK\\s*</Button>|\"(?:OK|Ok)\"",
+      "fix": "Verb + noun (\"Save changes\")"
+    },
+    "areYouSure": {
+      "behave": "dialog.confirm",
+      "pattern": "(?i)are you sure|sind sie sicher",
+      "fix": "Title = question with the object, text = consequence with count and names"
+    },
+    "errorToast": {
+      "behave": "status.error / field.invalid",
+      "pattern": "<ToastNotification\\b[^>]*\\bkind=\"error\"",
+      "fix": "Errors inline at the object, with a way out; toasts only for success"
+    },
+    "hiddenLabel": {
+      "behave": "ui-ux-form: visible label",
+      "pattern": "\\bhideLabel\\b",
+      "fix": "Show the label; a placeholder is not a label"
+    }
+  }
+}
