@@ -1,6 +1,6 @@
 {
   "name": "ui-ux-behaves",
-  "owner": { "name": "SINeV", "url": "https://github.com/sin-ev" },
+  "owner": { "name": "Steffen Lohbrandt" },
   "metadata": { "description": "UI/UX Behaves: design-system-agnostic UI/UX rules for Claude." },
   "plugins": [
     {
