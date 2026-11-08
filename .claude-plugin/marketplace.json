@@ -1,0 +1,12 @@
+{
+  "name": "ui-ux-behaves",
+  "owner": { "name": "SINeV", "url": "https://github.com/sin-ev" },
+  "metadata": { "description": "UI/UX Behaves: design-system-agnostic UI/UX rules for Claude." },
+  "plugins": [
+    {
+      "name": "ui-ux-behaves",
+      "source": "./",
+      "description": "A design-system-agnostic UI/UX rule suite with behave keys for every screen state, grounded in Norman, Nielsen, Gestalt and UX writing."
+    }
+  ]
+}
