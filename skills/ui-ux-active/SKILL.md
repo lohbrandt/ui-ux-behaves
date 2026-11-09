@@ -70,6 +70,6 @@ In detail (four strategies, mistakes, measuring): `references/warn-but-recover.m
 - [ ] Keyboard, announcement, focus afterwards checked?
 - [ ] Worst case protected in several layers?
 
-Heuristics (`../ui-ux/references/masters.md`): H3 control and freedom, H5 error prevention.
+Heuristics (`../ui-ux/references/masters.md`): H3 control and freedom, H5 error prevention, H9 a way out when blocked (`action.blocked`).
 
 Implementation: mapping of the keys in the design-system mapping (`ui-ux/references/design-system-mapping.md`).

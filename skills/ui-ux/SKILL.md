@@ -51,6 +51,11 @@ The plugin ships text only; the checks run with your own search and read tools.
   and of your design-system mapping. Every catalog key appears exactly once, none is left empty,
   and the mapping has no keys the catalog does not know.
 
+- `/ui-ux-behaves:review`: one screen against the behaves and the masters, heuristics H1 to H10
+  answered one by one.
+- `/ui-ux-behaves:walkthrough`: one task step by step from a newcomer's view, four questions per
+  step (cognitive walkthrough, `references/cognitive-walkthrough.md`).
+
 The audit only finds patterns. A clean run does not prove that states exist; that is the review.
 
 ## Who uses the app
@@ -60,9 +65,9 @@ interrupted, from evidence: user messages, tickets with acceptance criteria, usa
 help pages, domain rules. Everything else is an assumption with its cheapest test. No invented
 personas or numbers.
 
-**Depth of method:** convention or bug → finding, severity, fix. New page with an open question →
-brief, three concepts, recommendation in a plan document. Large initiative without a task → frame
-it first.
+**Depth of method:** convention or bug → finding, severity, fix. Core or costly task → cognitive
+walkthrough of that task before release. New page with an open question → brief, three concepts,
+recommendation in a plan document. Large initiative without a task → frame it first.
 
 ## Principles of the masters (apply everywhere)
 
@@ -92,7 +97,16 @@ says what drops away on narrow screens.
 ## Language (applies everywhere)
 
 Sentence case, no full stop at the end of labels, buttons and titles. Buttons are verb + noun
-("Save changes"), never "OK". Use the terms of the users' daily work, not the system's internals.
+("Save changes"), never "OK". Use the terms of the users' daily work, not the system's internals
+(H2). Say it once: what the heading already says is not repeated below it (H8).
+
+## Help (applies everywhere)
+
+Every flow has help made of concrete steps, reachable from the page where the flow starts, and
+searchable (H10). Help in context comes first: format next to the field, a "How it works" link at a
+blocked action, more help after the same error repeats. Frequent users get shortcuts and remembered
+settings, and hints they dismissed stay dismissed (H7). A help page is not an excuse for a screen
+that cannot be understood without it.
 
 ## Acceptance criteria
 

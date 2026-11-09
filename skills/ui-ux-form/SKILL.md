@@ -84,6 +84,7 @@ Concurrent editing: conflict protection instead of silent overwriting (`status.c
 - [ ] Leave guard for unsaved changes?
 - [ ] Labels, `autocomplete`, announcements checked; single column at 375 px?
 
-Heuristics (`../ui-ux/references/masters.md`): H5 error prevention, H9 recover from errors, H6 recognition.
+Heuristics (`../ui-ux/references/masters.md`): H2 the users' words (toggle label names the effect), H5 error prevention, H6 recognition,
+H9 recover from errors, H10 help after repeated errors (`field.repeatedError`).
 
 Implementation: mapping of the keys in the design-system mapping (`ui-ux/references/design-system-mapping.md`).

@@ -62,6 +62,6 @@ where helpful ("Claims (12)").
 - [ ] Arrow keys and panel linkage?
 - [ ] Overflow handled at 1024/375 px?
 
-Heuristics (`../ui-ux/references/masters.md`): H4 consistency (stable frame), H6 recognition.
+Heuristics (`../ui-ux/references/masters.md`): H3 no silent loss when switching (`tab.dirty`), H4 consistency (stable frame), H6 recognition.
 
 Implementation: mapping of the keys in the design-system mapping (`ui-ux/references/design-system-mapping.md`).

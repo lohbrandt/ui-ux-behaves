@@ -26,7 +26,8 @@ replacing one mapping file, not the rules. For IBM Carbon with React a filled-in
 
 The rules are grounded in the classics: Don Norman (signifiers, mapping, feedback), Jakob Nielsen's
 ten heuristics, Gestalt principles and UX writing. Each principle has a check question and links to
-the original texts. Two further groups cover sound (when it helps, and why silence is the default)
+the original texts, and each of the ten heuristics names where in the suite it is applied. For
+learnability, the cognitive walkthrough follows one task step by step from a newcomer's view. Two further groups cover sound (when it helps, and why silence is the default)
 and respect: no deceptive patterns.
 
 ## Skills
@@ -48,6 +49,7 @@ and respect: no deceptive patterns.
 | Command | What it does |
 |---|---|
 | `/ui-ux-behaves:review` | Reviews a page, component, URL or screenshot against the behaves and the masters; findings with severity, term and fix, then acceptance criteria |
+| `/ui-ux-behaves:walkthrough` | Walks through one task step by step from a newcomer's view (cognitive walkthrough): four questions per step, a recording sheet per step, findings and acceptance criteria |
 | `/ui-ux-behaves:audit` | Counts source patterns that break behaves (spinner over an area, toggle inside a submitted form, disabled submit, "Are you sure?") and keeps them from growing with a baseline |
 | `/ui-ux-behaves:copy-check` | Finds stuttering copy: the same word repeated in elements close together on screen, and rewrites the block |
 

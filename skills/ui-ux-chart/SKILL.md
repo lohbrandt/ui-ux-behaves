@@ -81,5 +81,8 @@ Required as for every container: `chart.loading`, `chart.empty`, `chart.error`; 
 - [ ] No personal data, small groups merged?
 - [ ] 1024 px and 375 px checked, keyboard reaches the values?
 
+Heuristics (`../ui-ux/references/masters.md`): H1 as-of time and period visible, H2 the heading asks the users'
+question, H8 a key figure or table when a chart adds nothing.
+
 Implementation: the mapping of these keys in your design system mapping
 (`references/design-system-mapping.md`).

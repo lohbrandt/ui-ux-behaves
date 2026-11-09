@@ -14,7 +14,10 @@ sub-skills; name the term in findings so it can be looked up.
   (1994, revised 2020, last reviewed 30 Jan 2024),
   [Consistency and Standards](https://www.nngroup.com/articles/consistency-and-standards/),
   [Aesthetic and Minimalist Design](https://www.nngroup.com/articles/aesthetic-minimalist-design/),
-  [Toggle-Switch Guidelines](https://www.nngroup.com/articles/toggle-switch-guidelines/)
+  [Toggle-Switch Guidelines](https://www.nngroup.com/articles/toggle-switch-guidelines/),
+  [How to Conduct a Heuristic Evaluation](https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/),
+  [Cognitive Walkthrough Workshop](https://www.nngroup.com/articles/cognitive-walkthrough-workshop/)
+  (method in `cognitive-walkthrough.md`)
 - Gestalt: [Principles of grouping](https://en.wikipedia.org/wiki/Principles_of_grouping),
   [Proximity](https://www.nngroup.com/articles/gestalt-proximity/),
   [Similarity](https://www.nngroup.com/articles/gestalt-similarity/),
@@ -47,18 +50,21 @@ changes lists on other pages.
 
 Name the number in findings ("H5"). Cases are generic building blocks; map them to your design system.
 
-| # | Heuristic | Check question | Building block |
-|---|---|---|---|
-| H1 | Visibility of system status | Is it obvious at once whether it is loading, saved or failed? | Save-status line with live region, skeleton while loading (`ui-ux-passive`) |
-| H2 | Match between system and real world | Are the words the users' own, in the order of their paper work? | Domain terms in labels, verb + noun on buttons, no internal names |
-| H3 | User control and freedom | Is there a clear exit, and can what was done be taken back? | Leave guard for unsaved changes, Escape and Cancel in dialogs, undo or trash (`ui-ux-active`) |
-| H4 | **Consistency and standards** | Does the same look the same, sit in the same place and follow convention? | Design-system components and tokens only, stable frame (below), audit ratchet in the gate |
-| H5 | Error prevention | Can the costly error not happen at all, or is the consequence known beforehand? | Constraints, pickers instead of free text, confirmation naming object and consequence |
-| H6 | Recognition rather than recall | Is everything needed visible without remembering it? | Visible filters, combo box, help link in context |
-| H7 | Flexibility and efficiency of use | Do experts have shortcuts, and does the app remember habits? | Keyboard shortcuts, remembered filters and column layout, dismissible hints |
-| H8 | **Aesthetic and minimalist design** | Does every word and element earn its place for the main goal? | No stutter (same word twice), dismissible page hints |
-| H9 | Recognise, diagnose, recover from errors | Does the message name the problem in plain words and offer the way out? | Notice with a next step (button or link) instead of code or dead end (`warn-but-recover.md`) |
-| H10 | Help and documentation | Is help in context, searchable and made of concrete steps? | Help page per flow, context link from the page, searchable help |
+| # | Heuristic | Check question | Building block | Applied in |
+|---|---|---|---|---|
+| H1 | Visibility of system status | Is it obvious at once whether it is loading, saved or failed? | Save-status line with live region, skeleton while loading | `ui-ux-passive`, `ui-ux-chart` (as-of time), walkthrough Q4 |
+| H2 | Match between system and real world | Are the words the users' own, in the order of their paper work? | Domain terms in labels, verb + noun on buttons, no internal names | Entry skill "Language", `ui-ux-form`, `ui-ux-chart`, walkthrough Q1/Q3 |
+| H3 | User control and freedom | Is there a clear exit, and can what was done be taken back? | Leave guard for unsaved changes, Escape and Cancel in dialogs, undo or trash | `ui-ux-active`, `ui-ux-dialog`, `ui-ux-tabs` |
+| H4 | **Consistency and standards** | Does the same look the same, sit in the same place and follow convention? | Design-system components and tokens only, stable frame (below), audit ratchet in the gate | Design-system mapping, `ui-ux-tabs`, `/ui-ux-behaves:audit`, walkthrough Q3 |
+| H5 | Error prevention | Can the costly error not happen at all, or is the consequence known beforehand? | Constraints, pickers instead of free text, confirmation naming object and consequence | `ui-ux-form`, `ui-ux-date`, `ui-ux-active`, `ui-ux-dialog` |
+| H6 | Recognition rather than recall | Is everything needed visible without remembering it? | Visible filters, combo box, help link in context | `ui-ux-table`, `ui-ux-form`, `ui-ux-date`, `ui-ux-tabs`, walkthrough Q2 |
+| H7 | Flexibility and efficiency of use | Do experts have shortcuts, and does the app remember habits? | Keyboard shortcuts, remembered filters and column layout, dismissible hints | `ui-ux-table`, `ui-ux-passive` (`page.hint`), entry skill "Help" |
+| H8 | **Aesthetic and minimalist design** | Does every word and element earn its place for the main goal? | No stutter (same word twice), dismissible page hints | Group 4 below, `/ui-ux-behaves:copy-check`, `ui-ux-chart`, walkthrough Q2 |
+| H9 | Recognise, diagnose, recover from errors | Does the message name the problem in plain words and offer the way out? | Notice with a next step (button or link) instead of code or dead end (`warn-but-recover.md`) | `ui-ux-form`, `ui-ux-passive`, `ui-ux-active`, walkthrough Q4 |
+| H10 | Help and documentation | Is help in context, searchable and made of concrete steps? | Help page per flow, context link from the page, searchable help | Entry skill "Help", `ui-ux-form` (`field.repeatedError`), walkthrough |
+
+Every heuristic has at least one place where it is applied. A review answers all ten, each with a
+finding or "no finding"; none is skipped because it seems not to fit.
 
 **Stable frame** (heuristic 4). Header, menu and side navigation stay in place when the user switches
 a tab or opens a page. If the frame disappears on one page, space appears that was not there before.
@@ -142,5 +148,6 @@ deceptive interface design for online platforms).
 
 1. Look at the page once like a newcomer: what invites a click, and what is different afterwards?
 2. Go through the six groups above and name findings with the term
-   ("Mapping: toggle acts on another page").
+   ("Mapping: toggle acts on another page"); in group 2 answer H1 to H10 one by one.
 3. Severity and fix as in the entry skill under "Depth of method".
+4. For a core or costly task, follow it step by step as well: `cognitive-walkthrough.md`.
