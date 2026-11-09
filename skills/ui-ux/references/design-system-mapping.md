@@ -88,4 +88,14 @@ changing the rules.
 | `dialog.nested` | | |
 | `dialog.close` | | |
 | `dialog.sidePanel` | | |
+| `chart.loading` | | |
+| `chart.empty` | | |
+| `chart.error` | | |
+| `chart.axis` | | |
+| `chart.legend` | | |
+| `chart.tooltip` | | |
+| `chart.color` | | |
+| `chart.table` | | |
+| `chart.kpi` | | |
+| `chart.dashboard` | | |
 <!-- behave-keys:end -->

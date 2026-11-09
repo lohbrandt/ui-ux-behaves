@@ -60,4 +60,6 @@ Toggles and dropdowns belong in the filter flyout, never in the toolbar.
 - [ ] Column priorities set for 1024/375 px?
 - [ ] Count via live region, focus after action defined?
 
+Heuristics (`../ui-ux/references/masters.md`): H6 recognition, H7 efficiency (remembered filters, columns).
+
 Implementation: mapping of the keys in the design-system mapping (`ui-ux/references/design-system-mapping.md`).

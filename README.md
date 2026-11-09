@@ -41,6 +41,7 @@ and respect: no deceptive patterns.
 | `ui-ux-passive` | System feedback: loading, saving, notifications, stale data, conflicts, offline |
 | `ui-ux-tabs` | Tabs: when to use them, URL state, dirty and invalid tabs, overflow |
 | `ui-ux-dialog` | Modals and side panels: when a dialog is right, focus, nesting, closing |
+| `ui-ux-chart` | Charts and key figures: which form, axis from zero, legends, data palette, table alternative, no personal data |
 
 ## Commands
 

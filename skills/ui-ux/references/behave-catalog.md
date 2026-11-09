@@ -92,6 +92,16 @@ follows the rules of `action.success`.
 | `dialog.nested` | interact | warning | on-input | ui-ux-dialog |
 | `dialog.close` | done | — | on-input | ui-ux-dialog |
 | `dialog.sidePanel` | interact | — | on-input | ui-ux-dialog |
+| `chart.loading` | processing | progress | on-async | ui-ux-chart |
+| `chart.empty` | outcome | empty | on-async | ui-ux-chart |
+| `chart.error` | recovery | error | on-async | ui-ux-chart |
+| `chart.axis` | idle | info | — | ui-ux-chart |
+| `chart.legend` | interact | info | on-input | ui-ux-chart |
+| `chart.tooltip` | interact | info | on-focus | ui-ux-chart |
+| `chart.color` | idle | info | — | ui-ux-chart |
+| `chart.table` | idle | info | on-input | ui-ux-chart |
+| `chart.kpi` | idle | info | on-async | ui-ux-chart |
+| `chart.dashboard` | idle | info | — | ui-ux-chart |
 <!-- behave-keys:end -->
 
 ## Warn, but Recover in the grid

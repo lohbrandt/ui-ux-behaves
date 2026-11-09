@@ -88,4 +88,14 @@ the note says what it has to do. Copy wording lives in your translation files, n
 | `dialog.nested` | Second question rendered in a portal above the open `Modal` | Avoid where possible |
 | `dialog.close` | Focus returns to the launcher, with a fallback when it is gone | |
 | `dialog.sidePanel` | Area next to the list in the `Grid` | |
+| `chart.loading` | Carbon Charts skeleton (`options.data.loading: true`); without Charts a `SkeletonPlaceholder` sized like the chart | |
+| `chart.empty` | Carbon Charts shows its empty state for empty data; put the `chart.empty` sentence as text above it, with the period filter (`date.preset`) as the way out | |
+| `chart.error` | `InlineNotification kind="error"` where the chart would be + "Reload" | |
+| `chart.axis` | Carbon Charts `axes.left/bottom` with `scaleType`, `includeZero: true`, `title`; numbers via `Intl.NumberFormat` | |
+| `chart.legend` | Carbon Charts `legend` (position `bottom`, `truncation`); with a single series `legend.enabled: false` | |
+| `chart.tooltip` | Carbon Charts `tooltip` (built in, keyboard via `accessibility`), `valueFormatter` with `Intl.NumberFormat` | |
+| `chart.color` | Carbon data visualization palette (`color.scale` only with palette tokens such as `$data-01`); status via `$support-*` | |
+| `chart.table` | Carbon Charts toolbar "Show as table" (built in); plus the table component for export | |
+| `chart.kpi` | `Tile` with `type-style('productive-heading-05')` for the number, label in `$text-secondary`, whole tile as `ClickableTile` to the list | |
+| `chart.dashboard` | `Grid` with one `Column` per tile (lg 4 for key figures, lg 8 for charts), spacing `$spacing-05`, no shadows | |
 <!-- behave-keys:end -->

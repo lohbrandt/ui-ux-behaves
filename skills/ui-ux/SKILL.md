@@ -22,6 +22,7 @@ skill and filled in). Switching design systems means a new mapping with the same
 | System feedback, loading, notification | `ui-ux-passive` |
 | Tabs | `ui-ux-tabs` |
 | Dialog, side panel | `ui-ux-dialog` |
+| Chart, key figure, report | `ui-ux-chart` |
 
 ## Behave grid
 

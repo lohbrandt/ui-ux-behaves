@@ -67,4 +67,6 @@ Build presets only where there is evidence (usage logs of filters; otherwise ask
 - [ ] Blocked days shown in advance, errors with a suggestion?
 - [ ] Keyboard contract and announcements checked, 375 px?
 
+Heuristics (`../ui-ux/references/masters.md`): H5 error prevention (blocked days), H6 recognition.
+
 Implementation: mapping of the keys in the design-system mapping (`ui-ux/references/design-system-mapping.md`).

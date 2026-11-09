@@ -1,7 +1,7 @@
 {
   "name": "ui-ux-behaves",
   "displayName": "UI/UX Behaves",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A design-system-agnostic UI/UX rule suite for software people depend on: every screen state gets a behave key (table.noResults, field.invalid, action.undo) with rules for accessibility, responsiveness and copy, grounded in Norman, Nielsen, Gestalt and UX writing, and free of deceptive patterns.",
   "author": {
     "name": "Steffen Lohbrandt",
@@ -19,6 +19,7 @@
     "forms",
     "tables",
     "dialogs",
-    "ux-writing"
+    "ux-writing",
+    "data-visualization"
   ]
 }

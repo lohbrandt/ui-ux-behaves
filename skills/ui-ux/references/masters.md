@@ -10,7 +10,8 @@ sub-skills; name the term in findings so it can be looked up.
   [Affordances and design](https://jnd.org/affordances-and-design/),
   [The Two UX Gulfs](https://www.nngroup.com/articles/two-ux-gulfs-evaluation-execution/),
   [Mapping](https://www.interaction-design.org/literature/topics/mapping)
-- Jakob Nielsen: [10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/),
+- Jakob Nielsen: [10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/)
+  (1994, revised 2020, last reviewed 30 Jan 2024),
   [Consistency and Standards](https://www.nngroup.com/articles/consistency-and-standards/),
   [Aesthetic and Minimalist Design](https://www.nngroup.com/articles/aesthetic-minimalist-design/),
   [Toggle-Switch Guidelines](https://www.nngroup.com/articles/toggle-switch-guidelines/)
@@ -44,18 +45,20 @@ changes lists on other pages.
 
 ## 2. Heuristics (Nielsen)
 
-| # | Heuristic | Short form |
-|---|---|---|
-| 1 | Visibility of system status | Loading, saving, state always visible (`ui-ux-passive`) |
-| 2 | Match with the real world | Terms from the users' work, order as on paper |
-| 3 | User control and freedom | Undo, cancel, trash (`ui-ux-active`) |
-| 4 | **Consistency and standards** | The same looks the same and stays in the same place |
-| 5 | Error prevention | Constraints before messages |
-| 6 | Recognition rather than recall | Choice instead of free input, keep context visible |
-| 7 | Flexibility and efficiency | Keyboard, remembered filters, shortcuts for experts |
-| 8 | **Aesthetic and minimalist design** | Every word and element must earn its place |
-| 9 | Recognise, diagnose, recover from errors | Problem + solution, warning with a way out |
-| 10 | Help and documentation | A help page per flow |
+Name the number in findings ("H5"). Cases are generic building blocks; map them to your design system.
+
+| # | Heuristic | Check question | Building block |
+|---|---|---|---|
+| H1 | Visibility of system status | Is it obvious at once whether it is loading, saved or failed? | Save-status line with live region, skeleton while loading (`ui-ux-passive`) |
+| H2 | Match between system and real world | Are the words the users' own, in the order of their paper work? | Domain terms in labels, verb + noun on buttons, no internal names |
+| H3 | User control and freedom | Is there a clear exit, and can what was done be taken back? | Leave guard for unsaved changes, Escape and Cancel in dialogs, undo or trash (`ui-ux-active`) |
+| H4 | **Consistency and standards** | Does the same look the same, sit in the same place and follow convention? | Design-system components and tokens only, stable frame (below), audit ratchet in the gate |
+| H5 | Error prevention | Can the costly error not happen at all, or is the consequence known beforehand? | Constraints, pickers instead of free text, confirmation naming object and consequence |
+| H6 | Recognition rather than recall | Is everything needed visible without remembering it? | Visible filters, combo box, help link in context |
+| H7 | Flexibility and efficiency of use | Do experts have shortcuts, and does the app remember habits? | Keyboard shortcuts, remembered filters and column layout, dismissible hints |
+| H8 | **Aesthetic and minimalist design** | Does every word and element earn its place for the main goal? | No stutter (same word twice), dismissible page hints |
+| H9 | Recognise, diagnose, recover from errors | Does the message name the problem in plain words and offer the way out? | Notice with a next step (button or link) instead of code or dead end (`warn-but-recover.md`) |
+| H10 | Help and documentation | Is help in context, searchable and made of concrete steps? | Help page per flow, context link from the page, searchable help |
 
 **Stable frame** (heuristic 4). Header, menu and side navigation stay in place when the user switches
 a tab or opens a page. If the frame disappears on one page, space appears that was not there before.

@@ -60,4 +60,6 @@ user must decide (`ui-ux-dialog`). A hint that blocks an action is `action.block
 - [ ] Stale and conflict visible instead of silent?
 - [ ] Time limits ≥ 10 s and closable?
 
+Heuristics (`../ui-ux/references/masters.md`): H1 system status, H9 notice with a way out.
+
 Implementation: mapping of the keys in the design-system mapping (`ui-ux/references/design-system-mapping.md`).

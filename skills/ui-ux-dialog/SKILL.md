@@ -64,4 +64,6 @@ a form.
 - [ ] Errors stay in the dialog, input kept?
 - [ ] 375 px and 200 % zoom checked?
 
+Heuristics (`../ui-ux/references/masters.md`): H3 exit (Escape, Cancel), H5 confirm only when there is a consequence.
+
 Implementation: mapping of the keys in the design-system mapping (`ui-ux/references/design-system-mapping.md`).
