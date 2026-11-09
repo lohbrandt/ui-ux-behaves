@@ -95,7 +95,7 @@ the note says what it has to do. Copy wording lives in your translation files, n
 | `chart.legend` | Carbon Charts `legend` (position `bottom`, `truncation`); with a single series `legend.enabled: false` | |
 | `chart.tooltip` | Carbon Charts `tooltip` (built in, keyboard via `accessibility`), `valueFormatter` with `Intl.NumberFormat` | |
 | `chart.color` | Carbon data visualization palette (`color.scale` only with palette tokens such as `$data-01`); status via `$support-*` | |
-| `chart.table` | Carbon Charts toolbar "Show as table" (built in); plus the table component for export | |
+| `chart.table` | Data table next to the chart (below on medium screens, instead of the chart on small ones) | Not the Carbon Charts toolbar: it wraps its buttons in a `div role="button"` (axe `nested-interactive`, serious); set `toolbar.enabled: false` |
 | `chart.kpi` | `Tile` with `type-style('productive-heading-05')` for the number, label in `$text-secondary`, whole tile as `ClickableTile` to the list | |
 | `chart.dashboard` | `Grid` with one `Column` per tile (lg 4 for key figures, lg 8 for charts), spacing `$spacing-05`, no shadows | |
 <!-- behave-keys:end -->
