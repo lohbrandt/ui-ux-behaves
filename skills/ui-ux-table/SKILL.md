@@ -36,7 +36,7 @@ Toggles and dropdowns belong in the filter flyout, never in the toolbar.
 - Result count after search/filter in a live region ("12 results") without moving focus.
 - A clickable row has a real link in the first cell; the row menu is keyboard reachable.
 - After a bulk action or delete, focus goes to the neighbouring row or the toolbar, never nowhere.
-- Checkboxes name the row ("Select creditor Miller").
+- Checkboxes name the row ("Select invoice 1042").
 
 ## Responsive
 

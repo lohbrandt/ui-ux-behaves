@@ -20,7 +20,7 @@ toast; every error says how to get it right.
 | `field.optional` | Required is the norm; optional is marked "(optional)" | Asterisk without explanation |
 | `field.readonly` / `field.disabled` | Always say why (permission, status) | Silent grey |
 | `field.override` | Check can be overridden for address/phone; never for IBAN or reference numbers | User cannot proceed |
-| `field.repeatedError` | From the 3rd identical error, more help (example, help link) | Same text over and over |
+| `field.repeatedError` | From the 2nd identical error, more help (example, short steps, help link to the exact section); from the 3rd, a way to ask a person | Same text over and over |
 
 **Timing:** validate on leaving the field (`on-blur`) and on submit. While typing only to remove an
 error already shown. Parse tolerantly: spaces, groups, upper/lower case.

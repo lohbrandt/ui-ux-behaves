@@ -5,7 +5,7 @@ description: Tabs. Use when a page is split into tabs, a tab is added or removed
 
 # Tabs
 
-Principle: tabs split **one** object into equal-ranking views (a case: overview, claims, documents).
+Principle: tabs split **one** object into equal-ranking views (a record: overview, history, documents).
 They are not navigation between areas and not a wizard.
 
 ## When tabs

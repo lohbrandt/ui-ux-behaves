@@ -21,7 +21,7 @@ Routine goes straight to `successBehave`.
 - **Tiered confirmation:** routine → undo message; consequential → confirmation; catastrophic →
   additionally typing or re-authentication.
 - **Forgiveness:** reversibility (undo, trash, deactivate), safety nets (confirmation, versions,
-  autosave, audit log), friendly failure (action-oriented, without blame).
+  autosave, audit log), friendly failure (action-oriented, without blame; `../../ui-ux/references/helpful-feedback.md`).
 - **Peak-end rule:** people remember the peak and the end; so it ends with a helpful close.
 - **Guide instead of forbid:** the safe choice as default, clear language, no manipulation.
 
@@ -38,10 +38,10 @@ Version with "deactivate instead of delete": `SKILL.md`.
 
 ## Designing `successBehave`
 
-- Specific: "Message sent to creditor Sparkasse. Undo?"
-- Action buttons instead of yes/no: "Delete case" / "Cancel"; the dangerous action always carries
+- Specific: "Message sent to Anna Weber. Undo?"
+- Action buttons instead of yes/no: "Delete record" / "Cancel"; the dangerous action always carries
   verb + noun.
-- Offer the next step: "Creditor restored – create letter".
+- Offer the next step: "Record restored – create letter".
 - Undo large and reachable; the message does not disappear while focus or mouse is on it.
 - On system error: "Your changes are saved locally and will be transferred on the next connection"
   + automatic retry, not "An error has occurred".

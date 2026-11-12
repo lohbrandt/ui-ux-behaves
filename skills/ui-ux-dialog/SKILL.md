@@ -24,7 +24,7 @@ decision that has to be made now. Everything else stays on the page.
 |---|---|---|
 | `dialog.open` | Initial focus: first field; for confirmations the **safe** action | Focus on "Delete" |
 | `dialog.form` | Rules from `ui-ux-form`; primary button = verb + noun | "OK" |
-| `dialog.confirm` | Title = question with the object, text = consequence with count/names, buttons "Delete case" / "Cancel" | "Are you sure?" + Yes/No |
+| `dialog.confirm` | Title = question with the object, text = consequence with count/names, buttons "Delete record" / "Cancel" | "Are you sure?" + Yes/No |
 | `dialog.busy` | Not closable during the action, button shows progress | Cancel still deletes |
 | `dialog.error` | Error inside the dialog, dialog stays open, input stays | Dialog closes, error gone |
 | `dialog.nested` | Follow-up from a dialog only for discard/delete; sits visibly on top | Second dialog underneath |

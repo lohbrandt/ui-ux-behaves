@@ -1,21 +1,22 @@
 ---
 name: ui-ux-passive
-description: System feedback without user action. Use when loading, saving, status, hints, notifications, toasts, live announcements, stale data, conflicts during concurrent editing, missing permissions or offline states are planned or reviewed.
+description: System feedback without user action. Use when loading, saving, status, hints, error messages, notifications, toasts, live announcements, stale data, conflicts during concurrent editing, missing permissions or offline states are planned, written or reviewed.
 ---
 
 # Feedback (passive)
 
 Principle: the system says **unprompted** what is going on, **without interrupting the user**.
 Message as close to the object as possible, as calm as possible, with a way out when something is
-stuck.
+stuck. Every message follows the four parts of `../ui-ux/references/helpful-feedback.md`: what
+happened, why in plain words, what to do now, what is kept.
 
 ## Behaves
 
 | Key | Rule | Trap |
 |---|---|---|
-| `page.loading` | Skeleton of the page, no spinner over the page | Empty state flashes before the data |
+| `page.loading` | Skeleton of the page, no spinner over the page; for long operations say what is being done in steps the user understands | Empty state flashes before the data |
 | `page.error` | Message with reason in user language and "Reload" | Blank page |
-| `page.noAccess` | Own page "No access" with a way back | Blank page or 404 |
+| `page.noAccess` | Own page "No access" with the reason, a way back and who can grant access | Blank page or 404 |
 | `page.hint` | Page hint at the top, dismissible, action "Show me how" | Hint returns after dismissing |
 | `status.saving` | Small status in place ("Saving …" → "Saved 10:42") | Whole page locked |
 | `status.success` | Inline or toast, not modal, disappears on its own | Success dialog with "OK" |
@@ -50,6 +51,7 @@ user must decide (`ui-ux-dialog`). A hint that blocks an action is `action.block
 - Spinner over the whole page; toast for a field error.
 - Message that steals focus.
 - Error without a way out, success without content.
+- Copy that blames the user, alarms without need ("Fatal", "!") or only names a code.
 - Realtime update that overwrites input.
 
 ## Checklist
@@ -59,6 +61,7 @@ user must decide (`ui-ux-dialog`). A hint that blocks an action is `action.block
 - [ ] Live region with fitting urgency?
 - [ ] Stale and conflict visible instead of silent?
 - [ ] Time limits ≥ 10 s and closable?
+- [ ] Every message: what happened, why, what now, what is kept; calm tone, no blame?
 
 Heuristics (`../ui-ux/references/masters.md`): H1 system status, H7 dismissible page hints that stay dismissed, H9 notice with a way out.
 

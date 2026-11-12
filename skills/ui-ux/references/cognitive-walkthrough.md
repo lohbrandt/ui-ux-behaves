@@ -23,7 +23,7 @@ Answer four questions in writing:
    in the entry skill): role, setting, what they already know from paper, other tools or the law.
    No invented personas; an assumption is marked as one.
 2. **Which task?** One task the product supports, named as the user would say it
-   ("Record a payment from a creditor"), not as a feature.
+   ("Record a payment for an invoice"), not as a feature.
 3. **Which steps?** The correct sequence of actions, written down in advance, plus known
    alternative paths. A form filled in and then "Next" may count as one step. Deciding this
    beforehand keeps the session from turning into a debate about the right way.
@@ -75,12 +75,12 @@ domain expert. Within the group:
 ## Recording sheet (one per step)
 
 ```markdown
-Task: Record a payment from a creditor   User group: counsellor, part-time   Step 3 of 6
-Action: Choose "Add payment" in the creditor's row
+Task: Record a payment for an invoice   User group: clerk, part-time   Step 3 of 6
+Action: Choose "Add payment" in the invoice's row
 
 | Q | Yes/No | Why |
 |---|---|---|
-| Q1 right thing | Yes | Payments are booked per creditor on the paper sheet too |
+| Q1 right thing | Yes | Payments are booked per invoice on the paper sheet too |
 | Q2 notice | No | Action only in the overflow menu of the row, not visible |
 | Q3 connect | Yes | "Add payment" uses their word |
 | Q4 progress | Yes | New row appears, total updates in place |
@@ -92,7 +92,7 @@ Result: FAIL (Q2)
 
 - The recorder collects the sheets. Every failed question becomes a finding in the review format of
   the suite: severity, principle by name ("Signifier: row action hidden in overflow menu"), place,
-  fix, and an acceptance criterion ("Given a creditor row, the action 'Add payment' is visible
+  fix, and an acceptance criterion ("Given an invoice row, the action 'Add payment' is visible
   without opening a menu").
 - Severity: a failure on a step without an alternative path, or on a costly step, is at least
   high; a failure with a visible alternative is medium.
