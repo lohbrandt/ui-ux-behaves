@@ -71,7 +71,8 @@ recommendation in a plan document. Large initiative without a task → frame it 
 
 ## Principles of the masters (apply everywhere)
 
-Norman, Nielsen, Gestalt and UX writing, with check questions and cases: `references/masters.md`.
+Norman, Nielsen, Gestalt, UX writing, sound, respect and helpful feedback, with check questions
+and cases: `references/masters.md`.
 
 - **Mapping and feedback:** the effect is visible where the user acts. If it happens elsewhere, the
   label says where (no "basement switch").
@@ -100,6 +101,17 @@ Sentence case, no full stop at the end of labels, buttons and titles. Buttons ar
 ("Save changes"), never "OK". Use the terms of the users' daily work, not the system's internals
 (H2). Say it once: what the heading already says is not repeated below it (H8).
 
+## Feedback that helps (applies everywhere)
+
+Nobody is left stranded. Every hint, warning, error, block and empty state says what happened in
+the users' words, whether it was them or the system, what they can do now and what is kept. Every
+one offers at least one action that moves the person forward, and a way to reach a person where
+the task matters. The tone is calm and kind, describes the situation and never the person, and
+states high standards with confidence that they can be met. Help grows with the difficulty:
+prevent, explain in place, guide on the first problem, more help on repetition, then a person.
+Pattern, examples and the Stanford and Harvard research it rests on:
+`references/helpful-feedback.md`.
+
 ## Help (applies everywhere)
 
 Every flow has help made of concrete steps, reachable from the page where the flow starts, and
@@ -116,4 +128,5 @@ Numbered, observable; each becomes a test step:
 - "With the keyboard alone, one can [task] without [obstacle]."
 - "A screen reader announces [name/state/message]."
 - "If [operation] fails, [data] is kept and [way out] is offered."
+- "When [problem] occurs a second time, [example or help link] is shown at [place]."
 - "At [width/zoom], [content] stays readable and usable."

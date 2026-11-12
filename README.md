@@ -17,6 +17,14 @@ where in the suite it is applied. A cognitive walkthrough covers learnability st
 a newcomer's view. Two further groups cover sound (used sparingly, with silence as the default)
 and respect (no deceptive patterns).
 
+A seventh group makes sure that no message leaves people stranded: every hint, warning and error
+says what happened, what to do now and what is kept, offers a way forward and is written in a
+calm, blame-free tone. Help increases with the difficulty, up to a person to ask. The pattern
+rests on published research from Stanford (wise feedback, computers as social actors, the
+behaviour model) and Harvard (scarcity and attention, operational transparency, small wins,
+psychological safety); each study is cited with what the suite takes from it in
+`skills/ui-ux/references/helpful-feedback.md`.
+
 ## What it does and does not do
 
 - **Does:** Tell a design system which state to show, when.
@@ -47,7 +55,7 @@ mapping file rather than the rules. A filled-in mapping for IBM Carbon with Reac
 | `ui-ux-form` | Forms and fields: validation timing, errors, toggles, unsaved changes, autosave |
 | `ui-ux-date` | Dates, times, ranges, presets, blocked days, time zones |
 | `ui-ux-active` | User actions: delete, send, confirm, undo, "Warn, but Recover" |
-| `ui-ux-passive` | System feedback: loading, saving, notifications, stale data, conflicts, offline |
+| `ui-ux-passive` | System feedback: loading, saving, notifications, error messages that help, stale data, conflicts, offline |
 | `ui-ux-tabs` | Tabs: when to use them, URL state, dirty and invalid tabs, overflow |
 | `ui-ux-dialog` | Modals and side panels: when a dialog is right, focus, nesting, closing |
 | `ui-ux-chart` | Charts and key figures: which form, axis from zero, legends, data palette, table alternative, no personal data |
@@ -91,7 +99,7 @@ Step 2 — after step 1 reports success, install the plugin:
 Ask Claude to plan, build, or review a screen, for example:
 
 - "Review the settings page against the UI/UX rules."
-- "Write acceptance criteria for the creditor list."
+- "Write acceptance criteria for the invoice list."
 
 Claude loads the entry skill and the matching sub-skill automatically. To connect your design
 system, copy `skills/ui-ux/references/design-system-mapping.md` into your design-system skill and

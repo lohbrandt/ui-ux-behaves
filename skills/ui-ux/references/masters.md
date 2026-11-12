@@ -1,6 +1,6 @@
 # Principles of the masters
 
-What the suite takes from the classics. Each rule has a check question and a case. Applies to all
+What the suite takes from the classics and from research on feedback. Each rule has a check question and a case. Applies to all
 sub-skills; name the term in findings so it can be looked up.
 
 ## Read the originals
@@ -60,7 +60,7 @@ Name the number in findings ("H5"). Cases are generic building blocks; map them 
 | H6 | Recognition rather than recall | Is everything needed visible without remembering it? | Visible filters, combo box, help link in context | `ui-ux-table`, `ui-ux-form`, `ui-ux-date`, `ui-ux-tabs`, walkthrough Q2 |
 | H7 | Flexibility and efficiency of use | Do experts have shortcuts, and does the app remember habits? | Keyboard shortcuts, remembered filters and column layout, dismissible hints | `ui-ux-table`, `ui-ux-passive` (`page.hint`), entry skill "Help" |
 | H8 | **Aesthetic and minimalist design** | Does every word and element earn its place for the main goal? | No stutter (same word twice), dismissible page hints | Group 4 below, `/ui-ux-behaves:copy-check`, `ui-ux-chart`, walkthrough Q2 |
-| H9 | Recognise, diagnose, recover from errors | Does the message name the problem in plain words and offer the way out? | Notice with a next step (button or link) instead of code or dead end (`warn-but-recover.md`) | `ui-ux-form`, `ui-ux-passive`, `ui-ux-active`, walkthrough Q4 |
+| H9 | Recognise, diagnose, recover from errors | Does the message name the problem in plain words and offer the way out? | Notice with a next step (button or link) instead of code or dead end (`helpful-feedback.md`, `warn-but-recover.md`) | `ui-ux-form`, `ui-ux-passive`, `ui-ux-active`, walkthrough Q4 |
 | H10 | Help and documentation | Is help in context, searchable and made of concrete steps? | Help page per flow, context link from the page, searchable help | Entry skill "Help", `ui-ux-form` (`field.repeatedError`), walkthrough |
 
 Every heuristic has at least one place where it is applied. A review answers all ten, each with a
@@ -144,10 +144,26 @@ Read: Harry Brignull, [Deceptive Patterns](https://www.deceptive.design/),
 EU Digital Services Act, [Article 25](https://eur-lex.europa.eu/eli/reg/2022/2065/oj) (ban on
 deceptive interface design for online platforms).
 
+## 7. Helpful feedback (nobody is left stranded)
+
+Every message answers the next question before it is asked: what happened, why in plain words,
+what to do now, what is kept. Every warning, error and block offers an action that moves the
+person forward; help grows with the difficulty, up to a person to ask. The tone describes the
+situation, not the person, and states high standards with confidence that they can be met.
+
+Check question: after reading the message once, does the person know what to do next, and does
+it sound like a calm colleague? Case: "Invalid input" under a date field instead of "Enter a date
+after 1 March, for example 15.03.2026".
+
+Pattern, help ladder, examples and the research it rests on (Stanford: Yeager and Cohen on wise
+feedback, Nass on computers as social actors, Fogg on ability and prompts; Harvard: Mullainathan on
+scarcity, Buell and Norton on operational transparency, Amabile on small wins, Edmondson on
+psychological safety): `helpful-feedback.md`.
+
 ## During a review
 
 1. Look at the page once like a newcomer: what invites a click, and what is different afterwards?
-2. Go through the six groups above and name findings with the term
+2. Go through the seven groups above and name findings with the term
    ("Mapping: toggle acts on another page"); in group 2 answer H1 to H10 one by one.
 3. Severity and fix as in the entry skill under "Depth of method".
 4. For a core or costly task, follow it step by step as well: `cognitive-walkthrough.md`.

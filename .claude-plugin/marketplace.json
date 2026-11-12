@@ -6,7 +6,7 @@
     {
       "name": "ui-ux-behaves",
       "source": "./",
-      "description": "A design-system-agnostic UI/UX rule suite with behave keys for every screen state, grounded in Norman, Nielsen, Gestalt and UX writing."
+      "description": "A design-system-agnostic UI/UX rule suite with behave keys for every screen state, grounded in Norman, Nielsen, Gestalt, UX writing and research on feedback."
     }
   ]
 }

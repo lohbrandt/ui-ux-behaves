@@ -1,8 +1,8 @@
 {
   "name": "ui-ux-behaves",
   "displayName": "UI/UX Behaves",
-  "version": "1.5.0",
-  "description": "A design-system-agnostic UI/UX rule suite for software people depend on: every screen state gets a behave key (table.noResults, field.invalid, action.undo) with rules for accessibility, responsiveness and copy, grounded in Norman, Nielsen, Gestalt and UX writing, and free of deceptive patterns.",
+  "version": "1.6.0",
+  "description": "A design-system-agnostic UI/UX rule suite for software people depend on: every screen state gets a behave key (table.noResults, field.invalid, action.undo) with rules for accessibility, responsiveness and copy, grounded in Norman, Nielsen, Gestalt, UX writing and research on feedback, so no message leaves people stranded, and free of deceptive patterns.",
   "author": {
     "name": "Steffen Lohbrandt",
     "url": "https://github.com/lohbrandt"

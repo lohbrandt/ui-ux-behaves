@@ -15,7 +15,7 @@ result, a way back, and a next step (forgiveness pattern, peak-end principle).
 
 | Key | Rule |
 |---|---|
-| `action.primary` | One per area, verb + noun ("Create case"), never "OK" |
+| `action.primary` | One per area, verb + noun ("Create record"), never "OK" |
 | `action.secondary` | Cancel, alternatives; placed before the primary action |
 | `action.danger` | Separate from everyday actions, at the bottom of the menu; never default, never on Enter |
 | `action.pending` | Button shows progress; a second click has no effect |
@@ -36,7 +36,7 @@ Decision, top to bottom, the first "yes" wins:
 | 2. Still referenced (other records, documents, links)? | `action.deactivate`: offer only "Deactivate"; "Delete" appears only when nothing points to it any more |
 | 3. Can it be cushioned? | Trash with a retention period, versions, audit log; then as 1 |
 | 4. Would a mistake be serious? | `action.confirm`: consequence with object, count, names **before** confirming |
-| 5. Worst case catastrophic and rare (delete permanently, send to an authority)? | Multi-layered: confirmation + log; `action.confirmTyped` (type the name) only here |
+| 5. Worst case catastrophic and rare (delete permanently, send to an external office)? | Multi-layered: confirmation + log; `action.confirmTyped` (type the name) only here |
 
 Also: frequent action → keep it light; user in flow (data entry, writing) → do not interrupt
 with a modal. Do not add artificial waiting times.
@@ -46,9 +46,9 @@ is easily undone.
 
 ## `action.success` and `action.failed`
 
-- Specific: "Letter sent to District Court Kiel.", not "Action completed".
+- Specific: "Letter sent to Anna Weber.", not "Action completed".
 - Undo **and** the next sensible step as a button; offer undo only when it works reliably.
-- Failure: what is kept, what works now, "Try again"; without technical jargon.
+- Failure: what is kept, what works now, "Try again"; without technical jargon or blame (`../ui-ux/references/helpful-feedback.md`).
 
 In detail (four strategies, mistakes, measuring): `references/warn-but-recover.md`.
 
@@ -57,7 +57,7 @@ In detail (four strategies, mistakes, measuring): `references/warn-but-recover.m
 - Announce success and undo via a live region; the message does **not** take focus.
 - The undo message stays while hovered/focused, can be closed, and is keyboard reachable (WCAG 2.2.1).
 - After the action: focus a sensible target (neighbouring row, heading), never lost.
-- Button names unambiguous without context ("Delete case Miller" in the row menu).
+- Button names unambiguous without context ("Delete record Weber" in the row menu).
 
 ## Responsive
 
