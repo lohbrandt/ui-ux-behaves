@@ -60,7 +60,7 @@ the note says what it has to do. Copy wording lives in your translation files, n
 | `table.scale` | `Pagination` with `itemRangeText` | |
 | `table.density` | `size` of `DataTable` | |
 | `table.columns` | Column chooser with a priority per column; minor columns hidden below `lg` | |
-| `action.primary` | `Button kind="primary"`, one per area | Verb + noun |
+| `action.primary` | `Button kind="primary"` (also without `kind`, the Carbon default) or `primaryButtonText` on `Modal`, one per area. Area boundaries: `Modal`, `ComposedModal`, `TabPanel`, `TableContainer`, `Tile`, `<section>`, `<aside>`; a component counts with the components it renders. Check it on the parsed component tree, not with a pattern per file | Verb + noun |
 | `action.secondary` | `Button kind="secondary"` / `"tertiary"` / `"ghost"` | |
 | `action.danger` | `Button kind="danger"` (in a dialog) / `"danger--ghost"`; in a menu `OverflowMenuItem isDelete` | |
 | `action.hidden` | Permission check hides the control; the server checks again | |
