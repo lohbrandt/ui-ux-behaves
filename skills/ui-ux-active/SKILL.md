@@ -15,7 +15,7 @@ result, a way back, and a next step (forgiveness pattern, peak-end principle).
 
 | Key | Rule |
 |---|---|
-| `action.primary` | One per area, verb + noun ("Create record"), never "OK" |
+| `action.primary` | One per area, verb + noun ("Create record"), never "OK". Area = a page or component including the children it renders, a dialog, a side panel, a tab, a table with its toolbar, a section with its own save; a parent inherits its children's primary actions, mutually exclusive branches count once |
 | `action.secondary` | Cancel, alternatives; placed before the primary action |
 | `action.danger` | Separate from everyday actions, at the bottom of the menu; never default, never on Enter |
 | `action.pending` | Button shows progress; a second click has no effect |
