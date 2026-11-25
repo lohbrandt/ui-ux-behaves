@@ -12,11 +12,18 @@ the note says what it has to do. Copy wording lives in your translation files, n
 | `page.error` | `InlineNotification kind="error" lowContrast` + `Button kind="tertiary"` "Try again" | No `ActionableNotification`: it moves focus. Not for 403/404 |
 | `page.noAccess` | Whole page: your no-access route. Area (HTTP 403): `Callout kind="info"` with the reason and a way back | No "Try again": a second attempt changes nothing |
 | `page.hint` | `Callout` (info) at the top of the page, dismissible per user | |
+| `notice.close` | `IconButton kind="ghost" size="sm"` with `Close` icon and label "Dismiss hint", top right of the `Callout`, last in the DOM; dismissed state in the user's server-side settings; your "Show hints again" in the personal settings | `Callout` ships no close button. `hideCloseButton` on `InlineNotification`/`ToastNotification` only for status, error or lock |
+| `hint.collect` | `IconButton kind="ghost" size="lg"` with `Information` icon and `badgeCount` in the `PageHeader`, list in `Popover`/`PopoverContent` directly below it | Your registry: dismissed hints and suggestions of the page register there |
+| `hint.transition` | Web Animations from the hint to the (i), `$duration-slow-01` and `motion(exit, expressive)`; then `focus()` on the (i) and a polite `role="status"` region | No animation under `prefers-reduced-motion` |
+| `hint.ticker` | Your ticker: a `button` next to the (i) with `aria-live="off"`, hidden below the `lg` breakpoint, interval about 8 s, paused on hover/focus | Off with `prefers-reduced-motion`; per-user switch in the settings |
 | `status.saving` | `InlineLoading` with `aria-live="polite"` ("Saving…", "Saved 10:42") | |
 | `status.success` | `InlineNotification kind="success"` or `ToastNotification lowContrast` with `role="status"`, `timeout` ≥ 10000 | |
 | `status.warning` | `Callout kind="warning"` | |
 | `status.error` | `InlineNotification kind="error" lowContrast`, the way out in `subtitle` | |
 | `status.live` | Server push (WebSocket/SSE) that invalidates the affected queries | |
+| `notice.new` | `HeaderGlobalAction` (bell) with the unread count in its `aria-label` and a badge; one visually hidden `role="status"` announcement | No `ToastNotification` per notification |
+| `notice.panel` | `HeaderPanel` at the bell: latest ten, deadlines on top with `Tag`, unread as `Tag`; focus on the panel heading, Escape returns focus to the bell | "Show all" links to the full list page |
+| `notice.due` | `ToastNotification lowContrast` with `role="status"`, `timeout` ≥ 10000 and a `Button kind="ghost"` "View notifications", once a day | No `ActionableNotification`: it moves focus |
 | `status.stale` | `InlineNotification kind="info"` "Changed meanwhile" + `Button kind="ghost"` "Reload" | |
 | `status.conflict` | Your conflict view: both values side by side, choose per field | |
 | `status.offline` | `InlineNotification kind="warning"`; reload after reconnect | |

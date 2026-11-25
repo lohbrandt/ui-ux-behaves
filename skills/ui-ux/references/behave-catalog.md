@@ -7,7 +7,9 @@ Columns: phase · semantics · trigger · sub-skill.
 Overlaps: `action.*` says **what** is decided (consequence, way back); `dialog.*` says **how** the
 dialog behaves (focus, closing). A delete confirmation satisfies both. `form.submitFailed` applies to
 the form, `status.offline` additionally when the connection is gone altogether. `form.submitSuccess`
-follows the rules of `action.success`.
+follows the rules of `action.success`. `page.hint` says where a hint stands, `notice.close` how it is
+dismissed; dismissed hints go to `hint.collect` (context of the page), notifications to `notice.*`
+(the person's bell).
 
 <!-- behave-keys:start -->
 | Key | Phase | Semantics | Trigger | Skill |
@@ -16,11 +18,18 @@ follows the rules of `action.success`.
 | `page.error` | outcome | error | on-async | ui-ux-passive |
 | `page.noAccess` | outcome | blocked | on-async | ui-ux-passive |
 | `page.hint` | idle | info | timed | ui-ux-passive |
+| `notice.close` | idle | info | on-click | ui-ux-passive |
+| `hint.collect` | idle | info | on-click | ui-ux-passive |
+| `hint.transition` | done | info | on-click | ui-ux-passive |
+| `hint.ticker` | idle | info | timed | ui-ux-passive |
 | `status.saving` | processing | progress | on-async | ui-ux-passive |
 | `status.success` | done | success | on-async | ui-ux-passive |
 | `status.warning` | outcome | warning | on-async | ui-ux-passive |
 | `status.error` | outcome | error | on-async | ui-ux-passive |
 | `status.live` | outcome | info | on-async | ui-ux-passive |
+| `notice.new` | outcome | info | on-async | ui-ux-passive |
+| `notice.panel` | idle | info | on-async | ui-ux-passive |
+| `notice.due` | idle | warning | timed | ui-ux-passive |
 | `status.stale` | outcome | warning | on-async | ui-ux-passive |
 | `status.conflict` | outcome | warning | on-submit | ui-ux-passive |
 | `status.offline` | outcome | error | on-async | ui-ux-passive |
