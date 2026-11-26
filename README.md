@@ -55,10 +55,16 @@ mapping file rather than the rules. A filled-in mapping for IBM Carbon with Reac
 | `ui-ux-form` | Forms and fields: validation timing, errors, toggles, unsaved changes, autosave |
 | `ui-ux-date` | Dates, times, ranges, presets, blocked days, time zones |
 | `ui-ux-active` | User actions: delete, send, confirm, undo, "Warn, but Recover" |
-| `ui-ux-passive` | System feedback: loading, saving, notifications, error messages that help, stale data, conflicts, offline |
+| `ui-ux-passive` | System feedback: loading, saving, dismissible hints and the page's hint collector, the notification bell, error messages that help, stale data, conflicts, offline |
 | `ui-ux-tabs` | Tabs: when to use them, URL state, dirty and invalid tabs, overflow |
 | `ui-ux-dialog` | Modals and side panels: when a dialog is right, focus, nesting, closing |
 | `ui-ux-chart` | Charts and key figures: which form, axis from zero, legends, data palette, table alternative, no personal data |
+
+## Evals
+
+Each rule added since 1.7.0 has an eval case under `evals/<case>/` (`prompt.md` with a realistic
+request, `graders/` with a check that `ui-ux-passive` was loaded and a rubric for the rule). Run them
+with `claude plugin eval .`; it compares against a run without the plugin.
 
 ## Commands
 
